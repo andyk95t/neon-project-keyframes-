@@ -6,7 +6,11 @@ body {
   height: 100vh;
   background-color: #111;
 }
-
+p{
+  color: #fff;
+  font-size: 8px;
+  Font-family: mono;
+}
 .neon-container {
   perspective: 1000px;
 }
