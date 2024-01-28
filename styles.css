@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+}
+
+.neon-container {
+  perspective: 1000px;
+}
+
+.neon-object {
+  width: 100px;
+  height: 100px;
+  background-color:#00ff9d;
+  box-shadow: 0 0 30px #00ff9d;
+  border-radius: 50%;
+  margin: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateY 5s infinite linear, neon-animation 2s infinite alternate;
+}
+
+@keyframes neon-animation {
+  0%, 100% {
+    box-shadow: 0 0 30px #00ff9d;
+    background-color:#00ff9d;
+  }
+  50% {
+    box-shadow: 0 0 40px #ff00ff;
+    background-color: #ff00ff;
+  }
+}
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+#object2 {
+  animation-delay: 1s;
+  filter:hue-rotate(50deg);
+}
+
+#object3 {
+  animation-delay: 2s;
+  filter:hue-rotate(100deg);
+}
